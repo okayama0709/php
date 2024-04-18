@@ -89,3 +89,20 @@ if ($age >= 30) {
 } else if ($age >= 20) {
     echo "20歳以上";
 }
+
+// for文
+
+for ($i = 1; $i <= 10; $i++) {
+    echo $i . "<br>";
+}
+?>
+<br>
+<?php
+for ($i = 1; $i <= 31; $i++) {
+    echo $i . " ";
+    if ($i % 7 == 0) {
+        echo "<br>";
+    }
+}
+
+?>
