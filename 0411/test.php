@@ -25,7 +25,7 @@ echo "<br>" ?>
 echo "<hr>";
 $a = "a";
 $b = "b";
-echo ($a + $b);
+// echo ($a + $b);エラー出る。
 echo ($a . $b);
 echo "<br><br>";
 ?>
