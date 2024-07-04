@@ -6,10 +6,11 @@
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
-        <li class="nav-item"><a class="nav-link" href="info.php">お知らせ</a></li>
-        <li class="nav-item"><a class="nav-link" href="upload-3.php">アップロード</a></li><!-- 追加する -->
+          <li class="nav-item"><a class="nav-link" href="info.php">お知らせ</a></li>
+          <li class="nav-item"><a class="nav-link" href="upload-3.php">アップロード</a></li><!-- 追加する -->
           <li class="nav-item"><a class="nav-link" href="album-2.php">アルバム</a></li><!-- リンクを貼る -->
           <li class="nav-item"><a class="nav-link" href="bbs.php">掲示板</a></li>
+
         </ul>
       </div>
     </nav>
