@@ -1,3 +1,6 @@
+<?php
+// index.phpをコピーしてくる
+?>
 <!doctype html>
 <html lang="ja" >
   <head>
@@ -12,8 +15,17 @@
       <div>
         <!-- ここから「本文」-->
 
-        <h1>サークルサイト</h1>
-
+        <h1>画像アップロード</h1>
+ <!-- p198 10-5 -->
+ <!--  画像アップロードするには、enctype="multipart/form-data" をつける  -->
+ <form action="upload.php" method="post" enctype="multipart/form-data">
+    <div class="form-group"><!-- クラス名は bootstrapのもの -->
+        <label>アップロードファイル</label>
+        <!-- ファイルは type="file" -->
+        <input type="file" name="image" class="form-control-file">
+    </div>
+    <input type="submit" value="アップロードする" class="btn btn-primary">
+ </form>
         <!-- 本文ここまで -->
       </div>
     </main>
@@ -23,3 +35,4 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
+
