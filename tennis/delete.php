@@ -1,7 +1,17 @@
 <?php
+// includes フォルダの login.phpを読み込む
+include 'includes/login.php';
+
 $id = intval($_POST['id']);
 $pass = $_POST['pass'];
+$token = $_POST['token'];
+// トークンのチェック
 
+if ($token != hash("sha256", session_id())) {
+    header("Location: bbs.php"); // bbs.phpへ移動する
+    exit(); // プログラム終了
+}
+    
 if ($id == '' || $pass == '') {
     header('Location: bbs.php');
     exit();

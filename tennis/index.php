@@ -1,7 +1,8 @@
 <?php
+// p278 リスト 12-5
 
-
-// $title には１行目が入る
+// includes フォルダの login.phpを読み込む
+include 'includes/login.php';
 
 
 // $info = file_get_contents("info.txt");

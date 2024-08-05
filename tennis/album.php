@@ -1,4 +1,7 @@
 <?php
+// includes フォルダの login.phpを読み込む
+include 'includes/login.php';
+
 // p206 10-9
 // htmlはindex.phpからコピーして、album.phpを作る
 

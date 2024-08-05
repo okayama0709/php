@@ -1,4 +1,7 @@
 <?php
+// includes フォルダの login.phpを読み込む
+include 'includes/login.php';
+
 // p261 12-2
 if (isset($_COOKIE['name'])) {
   $name = $_COOKIE['name'];
@@ -67,6 +70,8 @@ try {
             <div class="form-group">
                 <textarea name="body" class="form-control" row="5"></textarea>
             </div>
+
+    <input type="hidden" name="token" value="<?php echo hash("sha256", session_id()) ?>">
             <div class="form-group">
                 <label>削除パスワード 数字4桁</label>
                 <input type="text" name="pass" class="form-control">
@@ -98,13 +103,15 @@ while ($row = $stmt->fetch()) :?>
     ?>
     <div class="card-body">
       <?php // 教科書 p157 で出てきた nl2brを使うことで、html上で改行表示 ?>
-      <p class="card-text"><?php echo nl2br($row['body']);?></p>
+      <!-- p291 -->
+      <p class="card-text"><?php echo nl2br(htmlspecialchars($row['body'], ENT_QUOTES, 'UTF-8'));?></p>
     </div>
     <div class="card-footer">
         <form action="delete.php" method="post" class="form-inline">
     <?php echo $row['name'];?>
     (<?php echo $row['date'];?>)
     <input type="hidden" name="id" value="<?php echo $row["id"];?>">
+    <input type="hidden" name="token" value="<?php echo hash("sha256", session_id()) ?>">
     <input type="text" name="pass" placeholder="削除パスワード" class="form-control">
     <input type="submit" value="削除" class="btn btn-secondary">
 </form>

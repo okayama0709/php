@@ -1,0 +1,34 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+              /* post送信する */
+            const form = document.createElement('form');
+              form.action = 'http://localhost:8888/tennis/write.php';
+              form.method = 'post';
+                  // 送信データ作成
+              const data1 = document.createElement('input');
+              data1.name = 'name';
+              data1.value = 'bad';
+              form.appendChild(data1);
+            
+              const data2 = document.createElement('input');
+              data2.name = 'body';
+              data2.value = 'bad';
+              form.appendChild(data2);
+
+              const data3 = document.createElement('input');
+              data3.name = 'title';
+              data3.value = 'a';
+              form.appendChild(data3);
+              const data4 = document.createElement('input');
+              data4.name = 'pass';
+              data4.value = 1234;
+              form.appendChild(data4);
+              document.body.appendChild(form);
+          
+              form.submit();
+        
+          </script>
+    </body>
+</html>

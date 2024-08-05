@@ -1,3 +1,8 @@
+<?php
+// includes フォルダの login.phpを読み込む
+include 'includes/login.php';
+
+?>
 <!doctype html>
 <html lang="ja" >
   <head>
